@@ -9,7 +9,6 @@ from random import randint
 
 menu = ['Cadastrar nova palavra', 'Jogar', 'Sair'] #opções do menu
 indice =[]                                         #Índices das opções
-titulo('Bem vindo ao jogo de Forca!')              #mensagem de boas vindas
 palavras = 'palavras.txt'                          #Arquivo das palavras do jogo
 palavra =''                                        #incialização da variável palavra
 listaPalavras =[]                                  #Inicializa lista que vai receber as palavras cadastradas
@@ -24,6 +23,8 @@ listaIndice = []
     ############################################
                 # MENU INICIAL #
     ############################################
+
+titulo('Bem vindo ao jogo de Forca!')              #mensagem de boas vindas
 
 linha(27)
 
