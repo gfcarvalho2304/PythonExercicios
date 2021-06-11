@@ -126,7 +126,7 @@ while True:
                 enforca(chance)
                 chute = leia('Digite o seu chute: ').upper()  # captura o palpite do usuário
                 while True:
-                    if chute not in palpitesAnteriores:
+                    if chute not in palpitesAnteriores:       # Verifica se a letra já foi "chutada" anteriormente
                         palpitesAnteriores.append(chute)
                         break
                     else:
@@ -151,21 +151,21 @@ while True:
                         texto(f'Palpites Anteriores: {palpitesAnteriores}')
                         texto('Palavra Secreta:')
                         texto(palavraSecreta)
-                else:
-                    erro('Você errou!')
-                    chance-=1
+                else:                                   #Se o chute não existir na palavra sorteada:
+                    erro('Você errou!')                 #Exibe mensagem derro
+                    chance-=1                           #Jogador perde uma chance
                     texto(f'Palpites Anteriores: {palpitesAnteriores}')
                     texto('Palavra Secreta:')
                     texto(palavraSecreta)
-                    if chance ==0:
-                        enforca(chance)
-                        erro('Você perdeu!')
+                    if chance ==0:                      #Quando acabam as achances
+                        enforca(chance)                 #Chama função enforca
+                        erro('Você perdeu!')            #Exibe mensagem
                         break
 
         ############################################
             #  VOLTA AO MENU INICIAL #
         ############################################
-        palavraSorteada.clear()
+        palavraSorteada.clear()                        #Limpa as listas para um novo jogo
         palavraSecreta.clear()
         auxiliar.clear()
         palpitesAnteriores.clear()
@@ -175,7 +175,7 @@ while True:
             indice.append(o + 1)
         linha(27)
 
-titulo('Até a próxima')
+titulo('Até a próxima')                                #Mensagem de encerramento do programa
 
 
 
