@@ -144,7 +144,7 @@ while True:
 
                     if palavraSecreta == palavraSorteada: #Jogador vence quando a lista palavra secreta for igual a palavra sorteada
                         texto(palavraSecreta)
-                        sucesso('você venceu!')
+                        vence()
                         break
                     else:
                         sucesso('Você Acertou!')
@@ -159,7 +159,6 @@ while True:
                     texto(palavraSecreta)
                     if chance ==0:                      #Quando acabam as achances
                         enforca(chance)                 #Chama função enforca
-                        erro('Você perdeu!')            #Exibe mensagem
                         break
 
         ############################################

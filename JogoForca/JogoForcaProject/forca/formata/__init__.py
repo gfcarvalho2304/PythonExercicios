@@ -94,14 +94,23 @@ def enforca(tam=6):
         print()
     elif tam ==0:
         print()
-        erro("|----- ")
-        erro("|    | ")
-        erro("|    O ")
-        erro("|   /|\ ")
-        erro("|    | ")
-        erro("|   / \ ")
-        erro("_      ")
-        print()
+        titulo('Que pena...')
+        erro("                  |----- ")
+        erro("                  |    | ")
+        erro("                  |    O ")
+        erro("                  |   /|\ ")
+        erro("                  |    | ")
+        erro("                  |   / \ ")
+        erro("                  _       ")
+        titulo('Você morreu...')
 
-
+def vence():
+    print()
+    titulo('Parabéns!')
+    azul("                      \O/ ")
+    azul("                       | ")
+    azul("                       | ")
+    azul("                      / \ ")
+    titulo('Você venceu!')
+enforca(0)
 
