@@ -107,10 +107,9 @@ def enforca(tam=6):
 def vence():
     print()
     titulo('Parabéns!')
-    azul("                      \O/ ")
-    azul("                       | ")
-    azul("                       | ")
-    azul("                      / \ ")
+    sucesso("                      \O/ ")
+    sucesso("                       | ")
+    sucesso("                       | ")
+    sucesso("                      / \ ")
     titulo('Você venceu!')
-enforca(0)
 
