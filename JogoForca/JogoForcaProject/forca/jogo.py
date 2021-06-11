@@ -18,6 +18,7 @@ palavraSecreta=[]
 palavraSorteada =[]
 auxiliar =[]
 listaIndice = []
+palpitesAnteriores = []
 
 
     ############################################
@@ -108,6 +109,7 @@ while True:
         else:
             r = randint(0, len(listaPalavras) -1) #variavel r recebe um valor aleatório referente ao índice da lista
             sorteada = listaPalavras[r]
+            chance = 6
 
             for letra in sorteada:
                 palavraSecreta.append('—')      #preenche a lista com traços com o tamanho da palavra
@@ -115,13 +117,22 @@ while True:
                 auxiliar.append(letra)          #preenche a lista auxiliar identica a lista da palavra sorteada
 
 
-
-            print(palavraSecreta) #exibe a lista com os traços
+            texto('Palavra Secreta:')
+            texto(palavraSecreta) #exibe a lista com os traços
             #print(palavraSorteada) #teste
             #print(sorteada) #teste
 
             while True:
-                chute =leia('Digite o seu chute: ').upper() #captura o palpite do usuário
+                enforca(chance)
+                chute = leia('Digite o seu chute: ').upper()  # captura o palpite do usuário
+                while True:
+                    if chute not in palpitesAnteriores:
+                        palpitesAnteriores.append(chute)
+                        break
+                    else:
+                        erro('Você já chutou esta letra, tente outra!')
+                        chute = leia('Digite o seu chute: ').upper()
+
                 if chute in palavraSorteada:                #verifica se o palpite está na palavra sorteada
 
                     while True:
@@ -132,25 +143,37 @@ while True:
                             break                     #se não houver mais ocorrências da letra, sai do loop
 
                     if palavraSecreta == palavraSorteada: #Jogador vence quando a lista palavra secreta for igual a palavra sorteada
-                        print(palavraSecreta)
-                        print('você venceu')
+                        texto(palavraSecreta)
+                        sucesso('você venceu!')
                         break
                     else:
-                        print(palavraSecreta)
-                        #print(auxiliar) teste
-
-
+                        sucesso('Você Acertou!')
+                        texto(f'Palpites Anteriores: {palpitesAnteriores}')
+                        texto('Palavra Secreta:')
+                        texto(palavraSecreta)
+                else:
+                    erro('Você errou!')
+                    chance-=1
+                    texto(f'Palpites Anteriores: {palpitesAnteriores}')
+                    texto('Palavra Secreta:')
+                    texto(palavraSecreta)
+                    if chance ==0:
+                        enforca(chance)
+                        erro('Você perdeu!')
+                        break
 
         ############################################
             #  VOLTA AO MENU INICIAL #
         ############################################
+        palavraSorteada.clear()
+        palavraSecreta.clear()
+        auxiliar.clear()
+        palpitesAnteriores.clear()
         linha(27)
         for o, opcao in enumerate(menu):
             texto(f'{o + 1} - {opcao}')
             indice.append(o + 1)
         linha(27)
-
-
 
 titulo('Até a próxima')
 
