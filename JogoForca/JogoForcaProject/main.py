@@ -42,17 +42,19 @@ linha(27)
 if not arquivoExiste(palavras): # se o arquivo texto não existir ele é criado
     criarArquivo(palavras)
 
-a = open(palavras, 'rt')
-for l in a:
-    listaPalavras.append(l.replace('\n', ''))
+#a = open(palavras, 'rt')
+with open(palavras, 'rt') as a:
+    for l in a:
+        listaPalavras.append(l.replace('\n', ''))
 
     ############################################################
         # ABRE O ARQUIVO DO DICIONÁRIO DE PALAVRAS VÁLIDAS  #
     ############################################################
 
-d = open(dicionario, 'rt', encoding="UTF-8") #necessário parâmetro encoding para reconhecer as palavras do arquivo
-for x in d:
-    palavrasValidas.append(x.replace('\n', '').upper())
+#d = open(dicionario, 'rt', encoding="UTF-8") #necessário parâmetro encoding para reconhecer as palavras do arquivo
+with open(dicionario, 'rt', encoding="UTF-8") as d:
+    for x in d:
+        palavrasValidas.append(x.replace('\n', '').upper())
 
     ############################################
     # TRATAMENTO DE ERROS NA SELEÇÃO DE OPÇÕES #

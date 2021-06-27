@@ -13,7 +13,7 @@ class Dado:
         if self.tipo in self.dados:
             print(f'Você selecionou {self.qtd} D-{self.tipo}...')
             print()
-            sleep(2)
+            sleep(1)
             print('Rolando...')
             print()
             for i in range(0, self.qtd):
