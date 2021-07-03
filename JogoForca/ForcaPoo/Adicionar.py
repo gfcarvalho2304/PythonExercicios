@@ -49,7 +49,7 @@ class Cadastrar:
             elif palavra.isalpha() and len(palavra) > 1:  # verifica se a palavra é do tipo alpha
             # (não numerico ou chars especiais)
 
-                cadastrarPalavra(palavras, palavra)  # armazena palavra no arquivo texto
+                cadastrarPalavra(palavras, palavra.replace)  # armazena palavra no arquivo texto
                 listaPalavras.append(palavra.upper())  # adiciona a palavra na lista gerada no início do programa
 
                 continuar = str(leia('Deseja continuar cadastrando?'))  # verifica se o usuário deseja continuar

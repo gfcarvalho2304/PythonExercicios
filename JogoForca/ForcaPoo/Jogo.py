@@ -38,6 +38,12 @@ class Jogar:
 
         r = randint(0, len(listaPalavras) - 1)  # variavel r recebe um valor aleatório referente ao índice da lista
         sorteada = listaPalavras[r]
+
+        sorteada = sorteada.replace('Á', 'A') #Remove acentos
+        sorteada = sorteada.replace('É', 'E')
+        sorteada = sorteada.replace('Í', 'I')
+        sorteada = sorteada.replace('Ó', 'O')
+        sorteada = sorteada.replace('Ú', 'U')
         chance = 6
 
         for letra in sorteada:
