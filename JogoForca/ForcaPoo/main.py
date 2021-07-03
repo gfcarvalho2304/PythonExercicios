@@ -1,9 +1,9 @@
-import Adicionar
-import Jogo
+import Adicionar                             #Importa Classe Adicionar
+import Jogo                                  #Importa Classe Jogo
 from formata import *                        #importa pacote de formatação
 from cadastro import *                       #importa o pacote de cadastro das palavras
 from random import randint                   #importa função randint para selecionar aleatoriamente palavas da lista ##
-#from Adicionar import Cadastro
+
 
     ############################################
             # VARIÁVEIS DO SISTEMA #
@@ -47,7 +47,7 @@ while True:
                     # SAI DO PROGRAMA #
         ############################################
 
-        elif resp ==3:
+        elif resp == 3:
             break
 
         ############################################
