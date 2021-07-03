@@ -1,8 +1,13 @@
 from formata import *                        #importa pacote de formatação
 from cadastro import *                       #importa o pacote de cadastro das palavras
 
+
+            ############################################
+                # CLASSE CADASTRO DE PALAVRAS #
+            ############################################
+
 class Cadastrar:
-    def __init__(self): #Construtor
+    def __init__(self):
 
         ############################################
                 # VARIÁVEIS DAS CLASSE #

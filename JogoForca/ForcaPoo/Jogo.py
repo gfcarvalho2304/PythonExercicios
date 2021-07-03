@@ -1,6 +1,11 @@
 from formata import *                        #importa pacote de formatação
 from random import randint                   #importa função randint para selecionar aleatoriamente palavas da lista ##
 
+            ############################################
+                    # CLASSE JOGO DE FORCA  #
+            ############################################
+
+
 class Jogar:
     def __init__(self):
 
